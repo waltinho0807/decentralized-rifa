@@ -1,6 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
 const fs = require('fs');
-const privateKey = '0x39bb4345b618a3f22be9ec19cd3eb42462d2105cc499fa2a32af1ac2fc3a486f';
+const privateKey = '';
 const infuraId = '';
 
 module.exports = {
