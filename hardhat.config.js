@@ -1,7 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 const fs = require('fs');
 const privateKey = 'your private key';
-const infuraId = '';
+const infuraId = 'your infura key';
 
 module.exports = {
   defaultNetwork: "hardhat",
@@ -12,7 +12,7 @@ module.exports = {
     rinkeby: {
       // Infura
       // url: `https://polygon-mumbai.infura.io/v3/${infuraId}`
-      url: "https://rinkeby.infura.io/v3/5c0c38b8c82446f295d37e6861afde13",
+      url: "https://rinkeby.infura.io/v3/your infura key",
       accounts: [privateKey]
     },    
     mumbai: {
