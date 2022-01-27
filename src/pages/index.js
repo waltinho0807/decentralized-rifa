@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import Units from 'ethereumjs-units'
 import Web3Modal from "web3modal"
 
-const lottery_address = '0x3260dC18f8aA89edA6B8b5E58c8CB95005AaaBce'
+const lottery_address = 'contract address'
 import Lottery from '../../artifacts/contracts/Lottery.sol/Lottery.json'
 
 export default function Home()  {
