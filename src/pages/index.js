@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
 import Units from 'ethereumjs-units'
 import Web3Modal from "web3modal"
+import ReadContract from "../utils"
+
 
 const lottery_address = '0x3260dC18f8aA89edA6B8b5E58c8CB95005AaaBce'
 import Lottery from '../../artifacts/contracts/Lottery.sol/Lottery.json'
@@ -68,7 +70,7 @@ export default function Home()  {
     let inCrypto = Units.convert(premioString, 'wei', 'eth')
     let finalPremium = inCrypto.substring(0, inCrypto.length -9)
     
-    //console.log(premio)
+    console.log(process.env.CONTRACT_ADDRESS)
     console.log(finalPremium)
     router.push('/')
   }
@@ -119,6 +121,12 @@ export default function Home()  {
     let contract = new ethers.Contract(lottery_address, Lottery.abi, signer)
     let transaction = await contract.endLottery()
     let tx = await transaction.wait()
+    
+    router.push('/')
+  }
+
+  async function testUtils() {
+    console.log(ReadContract)
     
     router.push('/')
   }
@@ -193,6 +201,16 @@ export default function Home()  {
         />
         <button onClick={usdPrice} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
           Usd Value
+        </button>
+      </div>
+      <div className="w-1/2 flex flex-col pb-12">
+        <input 
+          placeholder="Asset Name"
+          className="mt-8 border rounded p-4"
+          onChange={e => updateFormInput(e.target.value )}
+        />
+        <button onClick={testUtils} className="font-bold mt-4 bg-pink-500 text-white rounded p-4 shadow-lg">
+          test
         </button>
       </div>
     </div>

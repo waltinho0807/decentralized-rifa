@@ -1,7 +1,9 @@
 require("@nomiclabs/hardhat-waffle");
 const fs = require('fs');
-const privateKey = '';
-const infuraId = '';
+require('dotenv').config()
+
+const privateKey = process.env.SECRET_KEY;
+const infuraId = process.env.INFURA_KEY;
 
 module.exports = {
   defaultNetwork: "hardhat",
