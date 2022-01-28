@@ -8,7 +8,6 @@ const infuraId = process.env.INFURA_KEY;
 =======
 const privateKey = 'your private key';
 const infuraId = 'your infura key';
->>>>>>> 9bbd0813ea7d38a73de271d83c97d11ba5872c5c
 
 module.exports = {
   defaultNetwork: "hardhat",
