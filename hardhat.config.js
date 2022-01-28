@@ -1,9 +1,14 @@
 require("@nomiclabs/hardhat-waffle");
 const fs = require('fs');
+<<<<<<< HEAD
 require('dotenv').config()
 
 const privateKey = process.env.SECRET_KEY;
 const infuraId = process.env.INFURA_KEY;
+=======
+const privateKey = 'your private key';
+const infuraId = 'your infura key';
+>>>>>>> 9bbd0813ea7d38a73de271d83c97d11ba5872c5c
 
 module.exports = {
   defaultNetwork: "hardhat",
@@ -14,7 +19,7 @@ module.exports = {
     rinkeby: {
       // Infura
       // url: `https://polygon-mumbai.infura.io/v3/${infuraId}`
-      url: "https://rinkeby.infura.io/v3/5c0c38b8c82446f295d37e6861afde13",
+      url: "https://rinkeby.infura.io/v3/your infura key",
       accounts: [privateKey]
     },    
     mumbai: {
